@@ -1,4 +1,4 @@
-const fs = require("node:fs/promises");
+const fs = require('node:fs/promises')
 
 // HACERLO CON CALLBACKS
 // fs.readdir(".", (err, files) => {
@@ -15,15 +15,14 @@ const fs = require("node:fs/promises");
 // });
 
 // FOMAR CON PROMESAS
-fs.readdir(".")
+fs.readdir('.')
   .then((files) => {
     files.forEach((file) => {
-      console.log(file);
-    });
+      console.log(file)
+    })
   })
   .catch((err) => {
     if (err) {
-      console.error("Se encontró un error al leer el archivo", err);
-      return;
+      console.error('Se encontró un error al leer el archivo', err)
     }
-  });
+  })

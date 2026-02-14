@@ -1,24 +1,38 @@
 {
-  "name": "course",
+  "name": "node-course",
   "version": "1.0.0",
-  "description": "",
-  "main": "1.os-info.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Curso de Node Js",
+  "keywords": [
+    "curso",
+    "node",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/juancholopes/node-course#readme",
+  "bugs": {
+    "url": "https://github.com/juancholopes/node-course/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juancholopes/node-course.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/juancholopes/node-course/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "homepage": "https://github.com/juancholopes/node-course#readme",
   "dependencies": {
-    "picocolors": "^1.1.1"
+    "picocolors": "1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "standard": "17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }

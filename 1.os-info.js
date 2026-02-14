@@ -1,19 +1,19 @@
-const os = require("node:os"); // Generalmente se utilizaba simplemente el nombre del modulo nativo pero ahora se recomienda usar el prefijo node: para evitar confusiones con modulos de terceros
+const os = require('node:os') // Generalmente se utilizaba simplemente el nombre del modulo nativo pero ahora se recomienda usar el prefijo node: para evitar confusiones con modulos de terceros
 
 console.log(
-  "Información acerca del sistema operativo donde se esta ejecutando Node",
-);
+  'Información acerca del sistema operativo donde se esta ejecutando Node'
+)
 
-console.log(os.platform());
-console.log(os.arch());
-console.log(os.cpus());
-console.log(os.freemem() / 1024 / 1024 / 1024, "GB");
-console.log(os.totalmem() / 1024 / 1024 / 1024, "GB");
-console.log(os.uptime() / 60 / 60, "Horas");
-console.log(os.userInfo());
+console.log(os.platform())
+console.log(os.arch()),
+  console.log(os.cpus())
+console.log(os.freemem() / 1024 / 1024 / 1024, 'GB')
+console.log(os.totalmem() / 1024 / 1024 / 1024, 'GB')
+console.log(os.uptime() / 60 / 60, 'Horas')
+console.log(os.userInfo())
 
-/* 
-RESUMEN: 
+/*
+RESUMEN:
 
 Información acerca del sistema operativo donde se esta ejecutando Node
 linux
