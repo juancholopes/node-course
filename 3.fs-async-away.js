@@ -14,7 +14,9 @@ const fs = require("node:fs/promises"); // Versión con promesas
 
 // VERSION CON LA FUNCIÓN AUTOINVOCADA
 // IIFE - Inmediatly Invoked Funcion Expressión
-(async () => {
+
+
+async function readFiles(){
   console.log("Leyendo el archivo 1");
   const text1 = await fs.readFile("./archivo.txt", "utf-8");
   console.log("Esto es el contenido del primer archivo:", text1);
@@ -22,4 +24,17 @@ const fs = require("node:fs/promises"); // Versión con promesas
   console.log("Leyendo el archivo 2");
   const text2 = await fs.readFile("./archivo2.txt", "utf-8");
   console.log("Esto es el archivo numero 2", text2);
-})();
+}
+
+readFiles();
+
+// Esto es lo mismo que hacer una función asíncrona y luego llamarla con una arrow function
+// (async () => {
+//   console.log("Leyendo el archivo 1");
+//   const text1 = await fs.readFile("./archivo.txt", "utf-8");
+//   console.log("Esto es el contenido del primer archivo:", text1);
+
+//   console.log("Leyendo el archivo 2");
+//   const text2 = await fs.readFile("./archivo2.txt", "utf-8");
+//   console.log("Esto es el archivo numero 2", text2);
+// })();

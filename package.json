@@ -1,0 +1,24 @@
+{
+  "name": "course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.os-info.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juancholopes/node-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/juancholopes/node-course/issues"
+  },
+  "homepage": "https://github.com/juancholopes/node-course#readme",
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  }
+}
