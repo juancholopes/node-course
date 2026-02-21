@@ -1,7 +1,7 @@
 const path = require('node:path')
 const fs = require('node:fs/promises')
 
-const folder = process.argv[2]
+const folder = process.argv[2] ?? '.'
 
 async function ls(folder) {
   let files
@@ -12,7 +12,7 @@ async function ls(folder) {
     process.exit(1)
   }
 
-  const filePromises = files.map(async (file) => {
+  const filesPromise = files.map(async (file) => {
     const filePath = path.join(folder, file)
     let stats
 
@@ -24,9 +24,17 @@ async function ls(folder) {
     }
 
     const isDirectory = stats.isDirectory()
-    const sizeFile = stats.sizeFile()
-    const extention = stats.extention()
+    const isFile = isDirectory ? 'd' : 'f'
+    const sizeFile = stats.size.toString()
+
+    return `${isFile.padEnd(5)} ${file.padEnd(30)}  ${sizeFile.padStart(10)}Kb`
+  })
+
+  const filesInfo = Promise.all(filesPromise);
+
+  (await filesInfo).forEach((fileInfo) => {
+    console.log(fileInfo)
   })
 }
 
-module.exports = ls()
+ls(folder)
