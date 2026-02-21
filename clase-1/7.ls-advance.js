@@ -7,6 +7,7 @@ const folder = process.argv[2] ?? '.'
 async function ls(folder) {
   let files
 
+  // Primero buscamos los archivos en el directorio
   try {
     files = await fs.readdir(folder)
   } catch (err) {
