@@ -4,10 +4,9 @@ const pc = require('picocolors')
 
 const folder = process.argv[2] ?? '.'
 
-async function ls (folder) {
+async function ls(folder) {
   let files
 
-  // Primero buscamos los archivos en el directorio
   try {
     files = await fs.readdir(folder)
   } catch (err) {
@@ -16,7 +15,6 @@ async function ls (folder) {
   }
 
   const filesPromise = files.map(async (file) => {
-    // Mapear cada uno de los archivos
     const filePath = path.join(folder, file)
 
     let stats

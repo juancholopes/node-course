@@ -1,0 +1,14 @@
+### Hacer una request GET a http://localhost:3000/ y verificar que se muestre el mensaje "Hola Mundo" en el navegador. Luego, hacer una request a http://localhost:3000/about y verificar que se muestre el mensaje "Acerca de nosotros". Finalmente, hacer una request a http://localhost:3000/image y verificar que se muestre una imagen.
+
+GET http://localhost:3000/ 
+
+
+### Para hacer una request POST a http://localhost:3000/pokemon/ditto con el siguiente cuerpo JSON:
+POST http://localhost:3000/pokemon/ditto
+Content-Type: application/json
+
+{
+  "name": "Ditto",
+  "type": "Normal",
+  "moves": ["Transform"]
+}
